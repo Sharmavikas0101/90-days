@@ -14,17 +14,17 @@ def fibo(n):
 fibo(10)
 
 2. How to find the sum of digits of positive integer using recursion.
-x=0
-y=0
-def sum(x,y):\
-    
-    assert int(x)==x and int(y)==y,"number cannot be non integer and negative"
-    if x<0:
-        print("x is negative interger")
-    elif y<0:
-        print("y is negative interger")
-    elif x>0 and y>0:
-        return x+y
-    
-sum(2,-3.5)
-    
+
+def sumofdigits(n):
+    assert int(n)==n and n>0, "Number should be interger and postive"
+    if n>10:
+        return int(n%10)+sumofdigits(int(n/10))
+    else:
+        return n
+
+
+sumofdigits(123)
+
+
+3.  How to calculate power of any number using recursion.
+
