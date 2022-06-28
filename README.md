@@ -28,3 +28,13 @@ sumofdigits(123)
 
 3.  How to calculate power of any number using recursion.
 
+def pow(base,expo):
+    assert expo>=0 and int(expo)==expo,'The exponent must be positive integer only'
+    if expo>1:
+        return base*pow(base,expo-1)
+    if expo==0:
+        return 1
+    if expo==1:
+        return base
+print(pow(-2,4))
+
